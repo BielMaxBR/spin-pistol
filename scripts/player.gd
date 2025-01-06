@@ -34,6 +34,6 @@ func _physics_process(delta: float) -> void:
 func set_pistol_rotation(direction_to_aim):
 	pistol.scale.y = 2*int(direction_to_aim.rotated(deg_to_rad(90)).angle() > 0)-1
 	pistol.rotation = direction_to_aim.angle()
-
+	$Sprite.flip_h = direction_to_aim.rotated(deg_to_rad(90)).angle() < 0
 	# moça, TUDO q tem aq embaixo, separa entre os states
 	

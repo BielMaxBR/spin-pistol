@@ -15,6 +15,7 @@ position = Vector2(225, 77)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(0, -77)
+zoom = Vector2(1.5, 1.5)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(512, 363)
