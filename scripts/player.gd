@@ -1,7 +1,7 @@
 extends CharacterBody2D
 class_name Player
 
-var speed = 400.0
+var speed = 450.0
 var jump_force = 650.0
 var gravity = 1400
 var max_fire_force = 1000
@@ -18,7 +18,7 @@ func _physics_process(delta: float) -> void:
 	direction = Input.get_axis("left","right")
 	if direction != 0:
 		last_direction = direction
-	print((global_position.direction_to(get_global_mouse_position()).rotated(deg_to_rad(90)).angle()))
+	#print((global_position.direction_to(get_global_mouse_position()).rotated(deg_to_rad(90)).angle()))
 
 	if Input.is_action_pressed("spin"):
 		spin_force += 1
