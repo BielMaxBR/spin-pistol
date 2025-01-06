@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://c0koaig1bpk73"]
+
+[ext_resource type="Texture2D" uid="uid://dnvoyhkf30lbg" path="res://sprites/fire_effect.png" id="1_f7x12"]
+[ext_resource type="Script" path="res://scripts/fire_effect.gd" id="2_1la87"]
+
+[node name="FireEffect" type="Sprite2D"]
+texture = ExtResource("1_f7x12")
+offset = Vector2(32, 0)
+script = ExtResource("2_1la87")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.1
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
